@@ -1,3 +1,3 @@
-rootProject.name = 'post_test'
+rootProject.name = 'get-server'
 
 include 'rest-server-app'
