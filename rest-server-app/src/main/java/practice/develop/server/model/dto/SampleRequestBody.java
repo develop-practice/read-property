@@ -1,26 +1,26 @@
 package practice.develop.server.model.dto;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class SampleRequestBody {
 
 	/** ID */
+	@NotBlank
+	@Size(max = 5)
 	private String id;
 
 	/** 数値 */
+	@Min(0)
+	@Max(100)
 	private int plusNum;
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public int getPlusNum() {
-		return plusNum;
-	}
-
-	public void setPlusNum(int plusNum) {
-		this.plusNum = plusNum;
-	}
 }
